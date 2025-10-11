@@ -1,0 +1,74 @@
+{
+  "type": "record",
+  "name": "log",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "unixtime",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      }
+    },
+    {
+      "name": "severity",
+      "type": {
+        "type": "enum",
+        "name": "Severity",
+        "symbols": [
+          "TRACE",
+          "DEBUG",
+          "INFO",
+          "WARN",
+          "ERROR",
+          "FATAL"
+        ]
+      }
+    },
+    {
+      "name": "status",
+      "type": "int"
+    },
+    {
+      "name": "value",
+      "type": "long"
+    },
+    {
+      "name": "amount",
+      "type": "float"
+    },
+    {
+      "name": "height",
+      "type": "double"
+    },
+    {
+      "name": "method",
+      "type": "string"
+    },
+    {
+      "name": "active",
+      "type": "boolean"
+    },
+    {
+      "name": "author",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "body",
+      "type": "string"
+    }
+  ]
+}
